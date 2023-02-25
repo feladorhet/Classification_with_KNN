@@ -35,7 +35,6 @@ def optimal_k_finder(X_train, X_test, y_train, y_test, error_rates):
         error_rates.append(np.mean(pred_i != y_test))
 
     op_k = error_rates.index(min(error_rates)) + 1 ## +1 SINCE INDEXING STARTS FROM 0 BUT K STARTS FROM 1 
-
     return op_k
 
 optimal_k = optimal_k_finder(X_train, X_test, y_train, y_test, error_rates)
